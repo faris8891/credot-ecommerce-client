@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="container d-flex justify-content-center d-lg-block   ">
-      <div className="row col-1 row-cols-1 row-cols-lg-12 w-100  ">
+      <div className=" row row-cols-1 row-cols-lg-12 w-100  ">
         <div className="col-12 col-lg-9 my-4">
           <div className=" d-block d-lg-flex gap-2 flex-wrap my-2">
             <p className="h6">Mobile:</p>
