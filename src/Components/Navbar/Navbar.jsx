@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -16,7 +15,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light ">
       <div className=" w-100   d-lg-flex align-items-lg-center container">
         <NavLink className="navbar-brand font-weight-bold" to="/" exact>
-          Demo
+          <p className="h3">SHOP</p>
         </NavLink>
         <button
           className="navbar-toggler position-fixed end-0 me-2 top-0 mt-2"
