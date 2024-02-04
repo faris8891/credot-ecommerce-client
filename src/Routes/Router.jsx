@@ -4,8 +4,9 @@ import Layout from "../Components/Layout/Layout";
 import ProductsPage from "../Pages/Users/Products/ProductsPage";
 import ProductPage from "../Pages/Users/Products/Product/ProductPage";
 import CartPage from "../Pages/Users/Cart/CartPage";
-import LoginPAge from "../Pages/Auth/Login/LoginPAge";
 import ErrorPage from "../Pages/Error/ErrorPage";
+import RegisterPage from "../Pages/Auth/Register/RegisterPage";
+import LoginPage from "../Pages/Auth/Login/LoginPAge";
 
 export const router = createBrowserRouter([
   {
@@ -15,9 +16,10 @@ export const router = createBrowserRouter([
       { path: "/products", element: <ProductsPage /> },
       { path: "/products/:id", element: <ProductPage /> },
       { path: "/cart", element: <CartPage /> },
+      { path: "/login", element: <LoginPage /> },
+      { path: "/register", element: <RegisterPage /> },
     ],
   },
 
-  { path: "/login", element: <LoginPAge /> },
   { path: "*", element: <ErrorPage /> },
 ]);

@@ -1,6 +1,7 @@
 function Sitemap() {
   return (
     <div className="container d-flex justify-content-center d-lg-block  ">
+      <hr />
       <div className="row row-cols-1 row-cols-lg-4 w-100 ">
         <div className="col">
           <p className="h5 my-3">IMPORTANT LINKS</p>
