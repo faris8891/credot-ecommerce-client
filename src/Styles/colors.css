@@ -41,6 +41,7 @@
 .bg-gray { background-color: #AAAAAA; }
 .bg-silver { background-color: #DDDDDD; }
 .bg-black { background-color: #111111; }
+.bg-tealBlue { background-color: #1AA5C3; }
 /* Colors */
 .navy { color: #001F3F; }
 .blue { color: #0074D9; }
@@ -59,6 +60,8 @@
 .silver { color: #DDDDDD; }
 .gray { color: #AAAAAA; }
 .black { color: #111111; }
+.tealBlue { color: #1AA5C3; }
+
 /* Border colors 
 
    Use with another border utility that sets border-width and style 

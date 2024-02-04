@@ -9,14 +9,13 @@ function Layout() {
       <div>
         <Navbar />
       </div>
-      <div className="vh-100">
+      <div className="min-vh-100">
         <Outlet />
       </div>
       <div>
         <Sitemap />
-        <div className="bg-silver ">
-
-        <Footer />
+        <div className="bg-silver mt-4 ">
+          <Footer />
         </div>
       </div>
     </div>
