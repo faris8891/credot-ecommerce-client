@@ -4,9 +4,11 @@ import App from './App.jsx'
 import './index.css'
 import './Styles/colors.css';
 import './Styles/hovers.css';
+import { Toaster } from 'react-hot-toast';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
+    <Toaster />
   </React.StrictMode>
 )

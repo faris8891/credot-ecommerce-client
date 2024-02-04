@@ -12,7 +12,7 @@ function Navbar() {
     },
   ];
   return (
-    <nav className="navbar navbar-expand-lg navbar-light ">
+    <nav className="navbar navbar-expand-lg navbar-light border-bottom ">
       <div className=" w-100   d-lg-flex align-items-lg-center container">
         <NavLink className="navbar-brand font-weight-bold" to="/" exact>
           <p className="h3">SHOP</p>

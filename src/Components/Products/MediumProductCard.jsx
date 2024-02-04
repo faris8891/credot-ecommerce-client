@@ -6,7 +6,7 @@ function MediumProductCard() {
       </p>
       <div className="d-flex justify-content-center w-100">
         <img
-          className="my-2 "
+          className="my-2  "
           width={"130px"}
           src="https://res.cloudinary.com/dknozjmje/image/upload/v1707044971/Credot/static/ziow04kvrbazaaxlkwkq.png"
           alt=""
