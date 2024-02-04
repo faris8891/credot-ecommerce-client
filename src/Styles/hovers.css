@@ -1,0 +1,16 @@
+.social-button {
+  background-color: #e9e9e9;
+  transition: 200ms ease-in-out;
+}
+.social-button:hover {
+    color: rgb(245, 245, 245);
+  background-color: #1aa5c3;
+}
+.payment-button {
+  background-color: #e9e9e9;
+  transition: 200ms ease-in-out;
+}
+.payment-button:hover {
+    color: rgb(245, 245, 245);
+  background-color: #77b7f6;
+}

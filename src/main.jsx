@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import './colors.css';
+import './Styles/colors.css';
+import './Styles/hovers.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
