@@ -43,7 +43,6 @@ export async function createProduct(product, file) {
 export async function createCategory(categoryData) {
   try {
     const res = await addCategory(categoryData);
-    console.log(res.message);
     if (res) {
       toast.success(res?.message, {
         duration: 5000,

@@ -1,5 +1,10 @@
+import { addToCart } from "../../Services/cartServices";
+
 function LargeProductCard({ product }) {
-  console.log(product);
+  addToCart;
+  const handleAddToCart = async (productId) => {
+    const res = await addToCart({ productId: productId });
+  };
   return (
     <div className="d-flex text-center flex-column align-items-center py-5">
       <img
@@ -17,7 +22,10 @@ function LargeProductCard({ product }) {
           <s> {product?.price + product?.price / 2}</s>
         </span>
       </p>
-      <button className=" bg-tealBlue border-0 py-2 px-5 my-2 text-light fw-semibold cartBtn">
+      <button
+        onClick={() => handleAddToCart(product?._id)}
+        className=" bg-tealBlue border-0 py-2 px-5 my-2 text-light fw-semibold cartBtn"
+      >
         Add to cart
       </button>
     </div>

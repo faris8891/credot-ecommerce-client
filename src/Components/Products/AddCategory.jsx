@@ -17,7 +17,7 @@ function AddCategory() {
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        <i className="bx bx-list-plus fs-2 "></i>
+        <i className="bx bx-list-plus fs-2 px-2 "></i>
       </button>
       <div
         className="modal fade"

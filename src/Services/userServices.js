@@ -22,7 +22,6 @@ export async function userRegister(userCredentials) {
     const res = await register(userCredentials);
     return res;
   } catch (error) {
-      console.log(error);
     toast.error(error?.errorMessage || "Something went wrong", {
       duration: 5000,
       style: {

@@ -22,7 +22,7 @@ function AddProduct({ category }) {
         data-bs-toggle="modal"
         data-bs-target="#categoryModal"
       >
-        <i className="bx bx-plus fs-2 "></i>
+        <i className="bx bx-plus fs-2 px-2  "></i>
       </button>
       <div
         className="modal fade"
