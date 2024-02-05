@@ -19,7 +19,7 @@ export async function createProduct(product, file) {
       Authorization: `Bearer ${token}`,
       "Content-Type": "multipart/form-data",
     };
-    const res = await axios.post(baseURL + "api/products", formData, {
+    const res = await axios.post(baseURL + "/api/products", formData, {
       headers,
     });
     if (res) {

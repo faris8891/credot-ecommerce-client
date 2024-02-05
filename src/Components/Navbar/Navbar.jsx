@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("accessToken");
   const routes = [
     {
       name: "Products",
@@ -11,6 +13,11 @@ function Navbar() {
       path: "/cart",
     },
   ];
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    navigate("/login");
+  };
   return (
     <nav className="navbar navbar-expand-lg navbar-light border-bottom ">
       <div className=" w-100   d-lg-flex align-items-lg-center container">
@@ -54,6 +61,19 @@ function Navbar() {
               </li>
             ))}
           </ul>
+          {!token && (
+            <NavLink className="nav-link" to={"/login"} exact>
+              Login
+            </NavLink>
+          )}
+          {token && (
+            <button
+              className="border cartBtn px-2 py-1 rounded"
+              onClick={handleLogout}
+            >
+              Log out
+            </button>
+          )}
         </div>
       </div>
     </nav>
