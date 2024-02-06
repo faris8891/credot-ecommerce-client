@@ -20,7 +20,7 @@ export async function createProduct(product, file) {
       "Content-Type": "multipart/form-data",
     };
     const res = await axios.post(`${baseURL}/api/products`, formData, {
-      ...headers,
+    headers,
     });
     if (res) {
       toast.success(res?.data?.message, {
