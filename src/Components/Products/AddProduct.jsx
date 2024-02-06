@@ -31,9 +31,7 @@ function AddProduct({ category }) {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",
       };
-      const res = await axios.post(`${baseURL}/api/products`, formData, {
-        headers,
-      });
+      const res = await axios.post(`${baseURL}/api/products`, formData);
       console.log(res);
 
       if (res) {
