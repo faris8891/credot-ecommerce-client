@@ -1,4 +1,8 @@
+import axios from "axios";
 import { createProduct } from "../../Services/productServices";
+import toast from "react-hot-toast";
+
+const baseURL = import.meta.env.VITE_SERVER_URL;
 
 function AddProduct({ category }) {
   const handleAddProduct = async (event) => {
@@ -11,8 +15,43 @@ function AddProduct({ category }) {
       stock: target?.stock?.value,
       description: target?.description?.value,
     };
-    const defaultImage = target?.defaultImage.files[0];
-    const res = await createProduct(product, defaultImage);
+    const file = target?.defaultImage.files[0];
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      Object.entries(product).forEach(([key, value]) => {
+        if (key != "defaultImage") {
+          formData.append(key, product[key]);
+        }
+      });
+      const token = localStorage.getItem("accessToken");
+
+      const headers = {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "multipart/form-data",
+      };
+      const res = await axios.post(`${baseURL}/api/products`, formData, {
+        headers,
+      });
+      console.log(res);
+
+      if (res) {
+        toast.success(res?.data?.message, {
+          duration: 5000,
+          style: {
+            borderRadius: "10px",
+          },
+        });
+      }
+    } catch (error) {
+      toast.error(error?.errorMessage || "something went wrong", {
+        duration: 5000,
+        style: {
+          borderRadius: "10px",
+        },
+      });
+    }
   };
   return (
     <>
