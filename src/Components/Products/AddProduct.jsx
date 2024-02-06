@@ -35,6 +35,7 @@ function AddProduct({ category }) {
       console.log(res);
 
       if (res) {
+        
         toast.success(res?.data?.message, {
           duration: 5000,
           style: {
@@ -43,6 +44,7 @@ function AddProduct({ category }) {
         });
       }
     } catch (error) {
+      console.log(error);
       toast.error(error?.errorMessage || "something went wrong", {
         duration: 5000,
         style: {
