@@ -20,7 +20,7 @@ export async function createProduct(product, file) {
       "Content-Type": "multipart/form-data",
     };
     const res = await axios.post(`${baseURL}/api/products`, formData, {
-      headers,
+      ...headers,
     });
     if (res) {
       toast.success(res?.data?.message, {
@@ -32,6 +32,7 @@ export async function createProduct(product, file) {
     }
     return res;
   } catch (error) {
+    console.log(error);
     toast.error(error?.errorMessage || "something went wrong", {
       duration: 5000,
       style: {
