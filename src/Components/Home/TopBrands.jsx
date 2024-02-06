@@ -15,8 +15,8 @@ function TopBrands() {
     grabCursor: true,
 
     breakpoints: {
-      425: {
-        slidesPerView: 4,
+      320: {
+        slidesPerView: 3,
         spaceBetween: 20,
       },
       768: {

@@ -32,7 +32,6 @@ export async function createProduct(product, file) {
     }
     return res;
   } catch (error) {
-    console.log(error,"------------");
     toast.error(error?.errorMessage , {
       duration: 5000,
       style: {
