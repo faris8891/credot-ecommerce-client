@@ -1,4 +1,9 @@
+import { addToCart } from "../../Services/cartServices";
+
 function MediumProductCard({ product }) {
+  const handleAddToCart = async (product) => {
+    const res = await addToCart(product);
+  };
   return (
     <div className="d-flex flex-column align-items-start px-2 py-2 position-relative ">
       <p className="bg-olive px-2 fs-6 rounded-3 text-light p-0 m-0 position-absolute top-0 start-0 mt-2">
@@ -8,7 +13,13 @@ function MediumProductCard({ product }) {
         style={{ width: "130px", height: "175px", overflow: "hidden" }}
         className=" p-2 d-flex justify-content-center w-100 align-items-center border-bottom "
       >
-        <img width={"100%"} height={"100%"} style={{objectFit:"contain"}} src={product?.defaultImage} alt="Product image" />
+        <img
+          width={"100%"}
+          height={"100%"}
+          style={{ objectFit: "contain" }}
+          src={product?.defaultImage}
+          alt="Product image"
+        />
       </div>
       <p className="text-info fw-semibold fs-6 m-0 ">
         {product?.category?.name}
@@ -34,7 +45,10 @@ function MediumProductCard({ product }) {
             <s> {product?.price + product?.price / 2}</s>
           </span>
         </p>
-        <i className=" bx bxs-cart-add h2 btn-gray  rounded-circle cartIcon"></i>
+        <i
+          onClick={() => handleAddToCart(product)}
+          className=" bx bxs-cart-add h2 btn-gray  rounded-circle cartIcon"
+        ></i>
       </div>
     </div>
   );

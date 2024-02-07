@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import { createCategory } from "../../Services/productServices";
 
 function AddCategory() {
+  const formRef = useRef(null);
   const handleAddCategory = async (event) => {
     event.preventDefault();
     const target = event.target;
@@ -8,6 +10,9 @@ function AddCategory() {
       name: target?.name?.value,
     };
     const res = await createCategory(category);
+    if (res) {
+      formRef.current.reset();
+    }
   };
   return (
     <>
@@ -41,6 +46,7 @@ function AddCategory() {
             </div>
             <div className="modal-body d-flex justify-content-center">
               <form
+                ref={formRef}
                 onSubmit={handleAddCategory}
                 className="w-75 d-flex gap-4 flex-column align-items-center justify-content-center"
               >

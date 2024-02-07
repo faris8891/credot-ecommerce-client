@@ -2,8 +2,8 @@ import { addToCart } from "../../Services/cartServices";
 
 function LargeProductCard({ product }) {
   addToCart;
-  const handleAddToCart = async (productId) => {
-    const res = await addToCart({ productId: productId });
+  const handleAddToCart = async (product) => {
+    const res = await addToCart(product);
   };
   return (
     <div className="d-flex text-center flex-column align-items-center py-5">
@@ -36,7 +36,7 @@ function LargeProductCard({ product }) {
         </span>
       </p>
       <button
-        onClick={() => handleAddToCart(product?._id)}
+        onClick={() => handleAddToCart(product)}
         className=" bg-tealBlue border-0 py-2 px-5 my-2 text-light fw-semibold cartBtn"
       >
         Add to cart
